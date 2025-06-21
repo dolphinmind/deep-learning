@@ -153,6 +153,8 @@ end
 
 ​	我们从多项式系数可以观察到, 当M=8时, 系数值震荡的开始显著.当M=9时, 系数值震荡得更加厉害. 
 
+​	「奥卡姆剃刀原理」: 若有多个假设与观察一致, 则选最简单的那个.
+
 ##### 2.3 预测数据
 
 ​	采用率为0.1, 合成101个数据, 得到测试集.
@@ -371,3 +373,109 @@ ridge_model(0.1, x, y, 9, 0.1);
 ​	当测点越多, 也就会变得愈加复杂.
 
 ​	上述本质上是个线性问题. 但是从过程性质上来参考, 前向传播递推、反向传播矫正 、构建深层节点集. 可当「它山之石」, 辅助理解.
+
+
+
+
+
+### 第04章 单层网络: 回归
+
+#### 1. 线性回归
+
+##### 1.1 基函数
+
+###### 多项式基函数
+
+![多项式基函数](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/多项式基函数.png)
+
+###### 高斯基函数
+
+![高斯基函数](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/高斯基函数.png)
+
+
+
+###### Sigmoid基函数
+
+> **常用作神经网络激活函数**，将输入映射到非线性空间
+
+Sigmoid函数定义为：
+
+$$
+sigma(x) = \frac{1}{1 + e^{-x}}
+$$
+带偏移量 \(b\) 和斜率参数 \(a\) 的一般形式：
+
+$$
+\sigma(x; a, b) = \frac{1}{1 + e^{-a (x - b)}}
+\
+$$
+![Sigmoid激活函数](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/Sigmoid激活函数.png)
+
+
+
+> 在数学物理方法这种传统学科下, 可在不同的坐标系下构建不同的基础正交系.
+
+- 直角坐标系: 傅立叶级数
+- 柱状坐标系: 贝塞尔函数
+- 球状坐标系: 勒让德函数
+
+
+
+##### 1.2 似然函数
+
+![Note Jun 19, 2025](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/Note Jun 19, 2025.png)
+
+![Page1](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/Page1.png)
+
+
+
+##### 1.3 最大似然
+
+![Page2](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/Page2.png)
+
+![机器学习思考](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/机器学习思考.png)
+
+
+
+##### 1.5 序贯学习
+
+![image-20250620222555054](/Users/mingxilv/Library/Application Support/typora-user-images/image-20250620222555054.png)
+
+##### 1.6  正则化最小二乘法
+
+![image-20250621090142961](/Users/mingxilv/Library/Application Support/typora-user-images/image-20250621090142961.png)
+
+##### 4.7 多重输出
+
+> https://www.science.org/doi/10.1126/sciadv.1700578
+
+![image-20250620224653310](/Users/mingxilv/Library/Application Support/typora-user-images/image-20250620224653310.png)
+
+​	地震信号可以拆分成三分量, 在每个分量上都可以用傅立叶函数作为基函数来合成.类似的RGB三通道. 
+
+​	多重输出对应的是把在似然函数小节分析的单维列向量`w`扩充到多维度列向量. 每个列向量在地震信号这个案例里面对应的是不同的方向.
+
+​	证明类似, 不用过多赘述.
+
+
+
+
+
+#### 2. 决策理论
+
+![机器学习思考1](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/机器学习思考1.png)
+
+![Figure_2](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/Figure_2.png)
+
+#### 3. 偏差-方差权衡
+
+![lambda3](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/lambda3.png)
+
+![lambda1](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/lambda1.png)
+
+![lambda-3](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/lambda-3.png)
+
+
+
+### 第05章 单层网络: 分类
+
