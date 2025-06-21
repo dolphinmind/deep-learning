@@ -145,11 +145,11 @@ end
 
 ​	<u>通过随机产生的噪声, 每次情况都不同, 截取单独一项作为分析</u>.
 
-![多项式拟合_训练](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/多项式拟合_训练.png)
+![多项式拟合_训练](${pic}/多项式拟合_训练-0472524.png)
 
 ​	上述的`M` 表示多项式阶数, 从成图上看, 当M=6时, 模型逼近`sin(x)` ;  当M=7时, 均方根误差增大; M=9虽然均方根很小, 将数据全部纳入了曲线中, 但是出现了`过拟合` 现象.
 
-![image-20250616185929768](/Users/mingxilv/Library/Application Support/typora-user-images/image-20250616185929768.png)
+![image-20250616185929768](${pic}/image-20250616185929768-0472537.png)
 
 ​	我们从多项式系数可以观察到, 当M=8时, 系数值震荡的开始显著.当M=9时, 系数值震荡得更加厉害. 
 
@@ -243,9 +243,9 @@ function test(border, wi, rms, dt, M)
 end
 ```
 
-![多项式拟合_测试](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/多项式拟合_测试.png)
+![多项式拟合_测试](${pic}/多项式拟合_测试.png)
 
-![均方根误差图](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/均方根误差图.png)
+![均方根误差图](${pic}/均方根误差图.png)
 
 ​	尽管预测效果很粗糙, 却也显示出了`sin(x)` 的趋势.
 
@@ -340,21 +340,21 @@ ridge_model(0.1, x, y, 9, 0.1);
 
 ###### 采样率为1
 
-![figure_185253](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/figure_185253.png)
+![figure_185253](${pic}/figure_185253.png)
 
-![figure_185255](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/figure_185255.png)
+![figure_185255](${pic}/figure_185255.png)
 
-![figure_185257](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/figure_185257.png)
+![figure_185257](${pic}/figure_185257.png)
 
 
 
 ###### 采样率为0.1
 
-![figure_185259](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/figure_185259.png)
+![figure_185259](${pic}/figure_185259.png)
 
-![figure_185301](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/figure_185301.png)
+![figure_185301](${pic}/figure_185301.png)
 
-![figure_185303](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter01/figure_185303.png)
+![figure_185303](${pic}/figure_185303.png)
 
 
 
@@ -386,11 +386,11 @@ ridge_model(0.1, x, y, 9, 0.1);
 
 ###### 多项式基函数
 
-![多项式基函数](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/多项式基函数.png)
+![多项式基函数](${pic}/多项式基函数.png)
 
 ###### 高斯基函数
 
-![高斯基函数](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/高斯基函数.png)
+![高斯基函数](${pic}/高斯基函数.png)
 
 
 
@@ -409,7 +409,7 @@ $$
 \sigma(x; a, b) = \frac{1}{1 + e^{-a (x - b)}}
 \
 $$
-![Sigmoid激活函数](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/Sigmoid激活函数.png)
+![Sigmoid激活函数](${pic}/Sigmoid激活函数.png)
 
 
 
@@ -423,33 +423,33 @@ $$
 
 ##### 1.2 似然函数
 
-![Note Jun 19, 2025](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/Note Jun 19, 2025.png)
+![Note Jun 19, 2025](${pic}/Note Jun 19, 2025.png)
 
-![Page1](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/Page1.png)
+![Page1](${pic}/Page1.png)
 
 
 
 ##### 1.3 最大似然
 
-![Page2](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/Page2.png)
+![Page2](${pic}/Page2.png)
 
-![机器学习思考](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/机器学习思考.png)
+![机器学习思考](${pic}/机器学习思考.png)
 
 
 
 ##### 1.5 序贯学习
 
-![image-20250620222555054](/Users/mingxilv/Library/Application Support/typora-user-images/image-20250620222555054.png)
+![image-20250620222555054](${pic}/image-20250620222555054.png)
 
 ##### 1.6  正则化最小二乘法
 
-![image-20250621090142961](/Users/mingxilv/Library/Application Support/typora-user-images/image-20250621090142961.png)
+![image-20250621090142961](${pic}/image-20250621090142961.png)
 
 ##### 4.7 多重输出
 
 > https://www.science.org/doi/10.1126/sciadv.1700578
 
-![image-20250620224653310](/Users/mingxilv/Library/Application Support/typora-user-images/image-20250620224653310.png)
+![image-20250620224653310](${pic}/image-20250620224653310.png)
 
 ​	地震信号可以拆分成三分量, 在每个分量上都可以用傅立叶函数作为基函数来合成.类似的RGB三通道. 
 
@@ -463,17 +463,17 @@ $$
 
 #### 2. 决策理论
 
-![机器学习思考1](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/机器学习思考1.png)
+![机器学习思考1](${pic}/机器学习思考1.png)
 
-![Figure_2](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/Figure_2.png)
+![Figure_2](${pic}/Figure_2.png)
 
 #### 3. 偏差-方差权衡
 
-![lambda3](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/lambda3.png)
+![lambda3](${pic}/lambda3.png)
 
-![lambda1](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/lambda1.png)
+![lambda1](${pic}/lambda1.png)
 
-![lambda-3](/Users/mingxilv/Documents/MATLAB/deep-learning/chapter02/src/main/lambda-3.png)
+![lambda-3](${pic}/lambda-3.png)
 
 
 
